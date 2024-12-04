@@ -5,23 +5,11 @@
 # that the elements in b are the elements in a squared, regardless of the order.
 
 def b_square_a(a, b):
-    print(a)
-    print(b)
-
-# Sort
-    a = sorted(a)
-    b = sorted(b)
-    print(a)
-    print(b)
-
-#Squaring a
-    a_square = list(map(lambda n : n*n, a))
-    print(a_square)
-    print(b)
-
-# comparing a squared and ordered and b
-    if a_square == b and a != []:
-        return True
+    if  type(a) != 'NoneType' and a != None and type(b) != 'NoneType' and b != None : 
+        # Squaring a
+        a_square = list(map(lambda n : n*n, a))
+        # Comparing ordered lists
+        return sorted(a_square) == sorted(b)
     else:
         return False
 

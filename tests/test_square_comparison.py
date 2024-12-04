@@ -9,14 +9,14 @@ from lib.square_comparison import *
 # Test b = a square, both lists are in the same order -> True
 def test_same_ordered():
     a = [24, 19, 8, 30, 2, 6]
-    b = [526, 361, 64, 900, 4, 36]
+    b = [576, 361, 64, 900, 4, 36]
     result = b_square_a(a, b)
     assert result == True
 
 # Test b = a square, the lists are in different orders -> True
 def test_same_unordered():
     a = [24, 19, 8, 30, 2, 6]
-    b = [900, 4, 36, 64, 361, 526]
+    b = [900, 4, 36, 64, 361, 576]
     result = b_square_a(a, b)
     assert result == True
 
@@ -67,5 +67,5 @@ def test_a_b_null():
     a = []
     b = []
     result = b_square_a(a, b)
-    assert result == False
+    assert result == True
 
