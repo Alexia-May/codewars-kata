@@ -4,9 +4,9 @@
 
 
 def tribonacci(signature, n):
-    sequence = signature
+    sequence = signature[0:n]
     for i in range (3,n):
         next_num = sum(sequence[-3:-1]) + sequence[-1]
         sequence.append(next_num)
-
+    
     return sequence
